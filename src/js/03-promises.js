@@ -6,7 +6,9 @@ const amount = document.querySelector ('input[name = amount]');
 
 submitBtn.addEventListener('click', formSubmit)
 
-function formSubmit() {
+function formSubmit(evt) {
+  evt.preventDefault();
+
    
   for (let i = 0; i < Number(amount.value); i += 1) {
     let allDelay = Number(firstDelay.value)
